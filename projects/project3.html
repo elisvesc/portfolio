@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3 – Coop Baronesa</title>
+    <link rel="stylesheet" href="project_style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo"> <a href="../index.html"><img src="../images/logo.png" alt="Logo"></a> </div>
+    <nav>
+        <ul>
+            <li><a href="../index.html">PROJETS</a></li>
+            <li><a href="../sig.html">SIG</a></li>
+            <li><a href="../publications.html">PUBLICATIONS</a></li>
+            <li><a href="../art.html">TABLEAUX</a></li>
+            <li><a href="../contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="slideshow-container">
+    <img src="../images/P3/slide1.png" class="slide active" alt="Slide 1">
+    <img src="../images/P3/slide2.png" class="slide" alt="Slide 2">
+    <img src="../images/P3/slide3.png" class="slide" alt="Slide 3">
+    <img src="../images/P3/slide4.png" class="slide" alt="Slide 4">
+    <img src="../images/P3/slide5.png" class="slide" alt="Slide 5">
+    <img src="../images/P3/slide6.png" class="slide" alt="Slide 6">
+    <img src="../images/P3/slide7.png" class="slide" alt="Slide 7">
+    <img src="../images/P3/slide8.png" class="slide" alt="Slide 8">
+    <img src="../images/P3/slide9.png" class="slide" alt="Slide 9">
+    <img src="../images/P3/slide10.png" class="slide" alt="Slide 10">
+    <img src="../images/P3/slide11.png" class="slide" alt="Slide 11">
+    <img src="../images/P3/slide12.png" class="slide" alt="Slide 12">
+    <img src="../images/P3/slide13.png" class="slide" alt="Slide 13">
+    <img src="../images/P3/slide14.png" class="slide" alt="Slide 14">
+    <img src="../images/P3/slide15.png" class="slide" alt="Slide 15">
+
+
+    <div class="project-title">Coop Baronesa</div>
+
+    <button class="nav-arrow prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="nav-arrow next" onclick="changeSlide(1)">&#10095;</button>
+</div>
+
+<script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const projectTitle = document.querySelector('.project-title');
+
+    const titles = [
+        "Perspective élévation ouest",
+        "Carrefour Rue Baronesa do Gravataí et Rue 17 de Junho",
+        "Perspective niveau 4",
+        "Perspective élévation est",
+        "Plan de niveau 1",
+        "Plan de niveau 2, 3 et 4",
+        "Plan de niveau 5",
+        "Unité d'habitation ",
+        "Système constructif préfabriquée ",
+        "Aménagements diverses d'habitation",
+        "Coupe C1",
+        "Coupe C2",
+        "Détail d’élévation",
+        "Elévation Sud",
+        "Elévation ouest",
+    ];
+
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+        projectTitle.textContent = titles[index] || "Coop Baronesa";  // fallback
+    }
+
+    function changeSlide(direction) {
+        slideIndex = (slideIndex + direction + slides.length) % slides.length;
+        showSlide(slideIndex);
+    }
+
+    // Show first slide and title on load
+    showSlide(slideIndex);
+</script>
+
+</body>
+</html>
