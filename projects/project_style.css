@@ -3,7 +3,7 @@ body {
     margin: 0;
     font-family: Garamond, serif;
     background-color: rgb(255, 255, 255);
-    color: white;
+    color: #8c8c8c;
     overflow-x: hidden;
 }
 
@@ -66,7 +66,7 @@ nav a {
     position: relative;
     width: 80%;
     margin: 0 auto;
-    height: calc(50vh - 100px); /* account for header */
+    height: calc(70vh - 100px); /* account for header */
     background-color: #ffffff; 
 }
 
@@ -88,7 +88,7 @@ nav a {
     width: 100%;
     text-align: center;
     font-size: 24px;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.4);
     padding: 15px 0;
 }
 
@@ -97,8 +97,8 @@ nav a {
     top: 50%;
     transform: translateY(-50%);
     font-size: 48px;
-    color: white;
-    background: rgba(0, 0, 0, 0.3);
+    color: #8c8c8c;
+    background: rgba(255, 255, 255, 0.3);
     border: none;
     cursor: pointer;
     padding: 10px 20px;
